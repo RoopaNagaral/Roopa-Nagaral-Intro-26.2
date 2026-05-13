@@ -1,0 +1,84 @@
+body{
+    margin: 20px;
+    padding: 0;
+    background-color: #4d6581;
+    color: #fbf9f9;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+header {
+    position: sticky;
+}
+
+section {
+    padding: 5px;
+    margin: 5px;
+}
+
+img{
+    margin-bottom: 20px;
+}
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    color: azure;
+}
+
+h2 {
+    font-size: x-large;
+    font-weight: 700;
+    color: blanchedalmond;
+}
+
+#about {
+    text-align: center;
+}
+
+/*#experience ul {
+    list-style: none;
+    padding-left: 2.5em;
+}
+
+#experience ul li {
+    position: relative;
+}
+
+#experience ul li::before {
+    content: "";
+  position: absolute;
+  left: -1.5em;
+  top: 0.5em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #b4cdea;
+}*/
+
+.experiences {
+    display: flex;
+}
+
+.exp{
+    margin-right: 25px;
+}
+
+.connects {
+    display: flex;
+}
+
+.con {
+    padding-right: 10px;
+}
+
+#github {
+    content: url("https://img.icons8.com/?size=100&id=12599&format=png");
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+}
+
+#linkedIn {
+    content: url("https://img.icons8.com/?size=96&id=13930&format=png");
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+}
