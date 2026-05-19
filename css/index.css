@@ -8,6 +8,7 @@ body{
 
 header {
     position: sticky;
+    top: 0;
 }
 
 section {
@@ -53,20 +54,24 @@ h2 {
   background: #b4cdea;
 }*/
 
-.experiences {
+#experience ul {
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
 }
 
-.exp{
-    margin-right: 25px;
+#experience li { 
+    padding: 12px 20px;
+    border-radius: 8px;
 }
 
-.connects {
+#connect ul {
     display: flex;
-}
-
-.con {
-    padding-right: 10px;
+    gap: 25px;
+    list-style-type: none;
+    padding: 0;
 }
 
 #github {
