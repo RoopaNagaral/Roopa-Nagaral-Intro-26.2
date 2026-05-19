@@ -7,7 +7,7 @@ const today = new Date();
 const thisYear = today.getFullYear();
 const footer = document.querySelector('footer');
 const copyright = document.createElement('p');
-copyright.innerHTML = '&copy ' + 'Roopa Nagaral ' + thisYear;
+copyright.innerHTML = '\u00A9 ' + 'Roopa Nagaral ' + thisYear;
 footer.appendChild(copyright);
 
 //creating array of skills and appending to the list
