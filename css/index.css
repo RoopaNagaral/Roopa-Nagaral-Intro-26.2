@@ -87,3 +87,29 @@ h2 {
     vertical-align: middle;
     width: 40px;
 }
+
+.skillsList ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        /* Make UL a flex container */
+        display: flex;
+        flex-wrap: wrap; /* Allow items to wrap to the next line */
+        gap: 10px; /* Space between items */
+        justify-content: center; /* Center items horizontally */
+    }
+
+    /* Style each list item */
+.skillsList ul li {
+        padding: 15px;
+        flex: 1 1 80px; /* Grow, shrink, base width */
+        text-align: center;
+        border-radius: 5px;
+    }
+
+    /* Optional: Make text unselectable for demo */
+.skillsList ul li {
+        user-select: none;
+    }
+
