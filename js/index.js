@@ -33,13 +33,13 @@ if(messageList.childElementCount === 0){
 
 messageForm.addEventListener("submit", event => {
     event.preventDefault();
-    const userName = event.target.usersName;
-    const userEmail = event.target.usersEmail;
-    const userMessage = event.target.usersMessage;
-    console.log('User Name: ' + userName.value + ' Email: ' + userEmail.value + ' User Message: ' + userMessage.value);
+    const userName = event.target.usersName.value;
+    const userEmail = event.target.usersEmail.value;
+    const userMessage = event.target.usersMessage.value;
+    console.log('User Name: ' + userName + ' Email: ' + userEmail + ' User Message: ' + userMessage);
     
     const newMessage = document.createElement('li');
-    newMessage.innerHTML = `<a href='mailto:${userEmail.value}'>${userName.value}</a> <span>${userMessage.value}</span>`;
+    newMessage.innerHTML = `<a href='mailto:${userEmail}'>${userName}</a> <span>${userMessage}</span>`;
 
     const removeButton = document.createElement('button');
     removeButton.innerText = "Remove";
