@@ -7,7 +7,7 @@ const today = new Date();
 const thisYear = today.getFullYear();
 const footer = document.querySelector('footer');
 const copyright = document.createElement('p');
-copyright.innerHTML = '&copy ' + 'Roopa Nagaral ' + thisYear;
+copyright.innerHTML = '&copy; ' + 'Roopa Nagaral ' + thisYear;
 footer.appendChild(copyright);
 
 //creating array of skills and appending to the list
@@ -20,3 +20,43 @@ for(let i = 0; i < skills.length; i++){
     skill.innerHTML = skills[i];
     skillsList.appendChild(skill);
 }
+
+//fetching input from form element and submitting the values
+const messageForm = document.getElementsByName('leave_message')[0];
+
+//getting message section and ul elemnet to check list is empty or not
+const messageSection = document.getElementById("messages");
+const messageList = messageSection.querySelector('ul');
+if(messageList.childElementCount === 0){
+    messageSection.style = 'display: none;';
+}  
+
+messageForm.addEventListener("submit", event => {
+    event.preventDefault();
+    const userName = event.target.usersName.value;
+    const userEmail = event.target.usersEmail.value;
+    const userMessage = event.target.usersMessage.value;
+    console.log('User Name: ' + userName + ' Email: ' + userEmail + ' User Message: ' + userMessage);
+    
+    const newMessage = document.createElement('li');
+    newMessage.innerHTML = `<a href='mailto:${userEmail}'>${userName}</a> <span>${userMessage}</span>`;
+
+    const removeButton = document.createElement('button');
+    removeButton.innerText = "Remove";
+    removeButton.type = "button";
+
+    removeButton.addEventListener("click", function(event){
+        const entry = removeButton.parentNode;
+        entry.remove();
+        if(messageList.childElementCount === 0){
+            messageSection.style = 'display: none;';
+        }  
+
+    });
+
+    newMessage.appendChild(removeButton);
+    messageList.appendChild(newMessage);
+
+    messageSection.style = 'display: block;';
+    event.target.reset();
+});
