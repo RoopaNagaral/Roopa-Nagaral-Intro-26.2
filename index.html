@@ -19,7 +19,8 @@
                 <a href="#experience">Experience</a>&nbsp;
                 <a href="#skills">Skills</a>&nbsp;
                 <a href="#projects">Projects</a>&nbsp;
-                <a href="#connect">Connect</a>
+                <a href="#connect">Connect</a>&nbsp;
+                <a href="#leaveMessage">Leave Message</a>
             </nav>
        </header>
        <main>
@@ -63,6 +64,20 @@
                 <ul></ul>
             </section>
 
+            <section id="leaveMessage">
+                <h2>Leave a Message</h2>
+                <form name="leave_message" class="leave_message">
+                    <label>UsersName: </label><input type="text" name="usersName" required="true" /> <br>
+                    <label>Email: </label><input type="email" name="usersEmail" required="true" /> <br>
+                    <label>User Message: </label><textarea name="usersMessage" required="true"></textarea> <br>
+                    <button type="submit" name="submit">Submit</button>
+                </form>
+            </section>
+            <section id="messages">
+                <h2>Messages</h2>
+                <ul></ul>
+            </section>
+
             <section id="connect">
                 <div>
                     <h2>Connect</h2>
@@ -85,6 +100,7 @@
                     </div> -->
                 </div>
             </section>
+            
        </main>
        <script src="js/index.js"></script>
     </body>
