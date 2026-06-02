@@ -11,7 +11,7 @@ copyright.innerHTML = '&copy; ' + 'Roopa Nagaral ' + thisYear;
 footer.appendChild(copyright);
 
 //creating array of skills and appending to the list
-const skills = ["javaScript", "HTML", "CSS", "C#", "ASP.Net", "SQL", "Jquery"];
+const skills = ["javaScript", "HTML", "CSS", "C#", "ASP.Net", "SQL", "Jquery", "C", "MySql"];
 const skillsSection = document.getElementById('skills');
 const skillsList = skillsSection.querySelector('ul');
 
@@ -60,3 +60,56 @@ messageForm.addEventListener("submit", event => {
     messageSection.style = 'display: block;';
     event.target.reset();
 });
+
+//fetch github repositories by using API
+fetch('https://api.github.com/users/RoopaNagaral/repos')
+    .then((response) => {
+        if(!response.ok){
+            throw new Error('Request Failed!');
+        }
+        return response.json();
+    })
+    .then((data) => {
+        const repositories = data;
+        console.log(repositories);
+
+        const projectSection = document.getElementById('projects');
+        const projectList = projectSection.querySelector('ul');
+
+        for(let i = 0; i < repositories.length; i++) {
+            const project = document.createElement('li');
+            project.innerText = repositories[i].name;
+            projectList.appendChild(project);
+        }
+    })
+    .catch(error => {
+        console.error('An error accord', error);
+    });
+
+// const api_url = 'https://api.github.com/users/RoopaNagaral/repos';
+
+// async function getGithubRepos(url) {
+//     try {
+//         const response = await fetch(url);
+//         const data = await response.json();
+//         const repositories = await data;
+//         console.log(repositories);
+
+//         const projectSection = document.getElementById('projects');
+//         const projectList = document.querySelector('ul');
+
+//         repositories.forEach(element => {
+//             console.log(element.name);
+//         });
+//         // for(let i = 0; i < repositories.length; i++) {
+//         //     const project = document.createElement('li');
+//         //     console.log(repositories[i]);
+//         // }
+    
+//     } catch(error) {
+//         console.error(error);
+//     }
+// }
+
+// getGithubRepos(api_url);
+   
