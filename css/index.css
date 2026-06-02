@@ -232,14 +232,14 @@ h2 {
     gap: 10px;
 }
 
-.projects ul li {
+#projects ul li {
     padding: 15px;
     flex: 1 1 80px; 
     text-align: center;
     border-radius: 5px;
 }
 
-.projects ul li {
+#projects ul li {
     user-select: none;
 }
 
@@ -260,7 +260,7 @@ h2 {
     nav {
         font-size: large;
     }
-    
+
     .skillsList ul {
         flex-direction: row;
         gap: 0;
